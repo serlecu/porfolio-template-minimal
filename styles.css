@@ -1,36 +1,30 @@
 body {
-    padding-left: 2vh;
-    padding-right: 2vh;
+    padding: 5vh;
     margin: 0px;
     height: 500px;
     background-color: whitesmoke;
     font-family: sans-serif;
     font-stretch: semi-expanded;
     font-size: 12px;
-    overflow-x: hidden;
+    overflow-x: visible;
     overflow-y: hidden;
 }
 .top-void{
-  position: fixed;
+  position: relative;
   display: block;
   z-index: 20;
-  height: calc(0.5*(100vh - 600px));
+  height: calc(0.3*(100vh - 600px));
   min-height: 2%;
-  margin: 0px -2vh 30px -2vh;
-  background-color: dimgrey;
-}
-.bottom-void{
-  position: fixed;
-  display: block;
-  z-index: 20;
-  height: calc(0.5*(100vh - 500px));
-  min-height: 2%;
-  margin: 50px -2vh 0px -2vh;
-  background-color: dimgrey;
+  margin: 0px -5vh 0px -5vh;
+  background-color: whitesmoke;
 }
 
 aside{
   overflow-y: hidden;
+  overflow-x: hidden;
+}
+aside:hover{
+  overflow-x: scroll;
 }
 
 /* title */
@@ -92,15 +86,14 @@ nav ul ul{
   margin-bottom: 10px;
 }
 
-nav ul ul{
-  list-style-type: none;
-  margin-bottom: 10px;
-}
-
 section{
   margin-left: 180px;
   max-height: 500px;
-
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+section:hover{
+  overflow-x: auto;
 }
 
 section ul{
@@ -192,16 +185,24 @@ section img{
   max-height: 500px;
   text-align: center;
 }
+
+/* Content of projects */
+.subsection-gallery{
+  max-height: 500px;
+  position: relative;
+  display: inline-grid;
+  grid-column-gap: 30px;
+}
+/* Text content of projects */
 .subsection-text-block{
   width: 400px;
-  max-height: 500px;
+  margin-right: 30px;
   height: 500px;
   overflow-y: hidden;
+  position: relative;
+  display: inline;
+  grid-row: 1;
 }
-.subsection-text-block:hover{
-  /* overflow-y: scroll; */
-}
-
 .subsection-text-tech{
   margin-top: 30px;
   color: grey;
@@ -213,11 +214,11 @@ section img{
   margin-top: 25px;
   color: grey;
 }
+/* Image content of projects */
 .subsection-img{
-  margin-left: 30px;
-  position: relative;
-  display: inline-block;
+  display: inline;
+  grid-row: 1;
 }
-.subsection-vid{
-
-}
+/* Video content of projects */
+.subsection-video{}
+.subsection-audio{}
