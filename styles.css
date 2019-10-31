@@ -24,7 +24,7 @@ aside{
   overflow-x: hidden;
 }
 aside:hover{
-  overflow-x: scroll;
+  overflow-x:auto;/* scroll; */
 }
 
 /* title */
