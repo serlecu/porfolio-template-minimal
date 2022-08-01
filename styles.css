@@ -131,6 +131,11 @@ section img{
   text-decoration: none;
 }
 
+#incover-kein-spieler{
+  margin-top: 55%;
+  margin-left: 40%;
+}
+
 #incover-niss{
   margin-top: 16%;
   margin-left: 33%;
@@ -145,7 +150,7 @@ section img{
 }
 #incover-drive{
   margin-top: 20%;
-  margin-left: 50%;
+  margin-left: 45%;
 }
 #incover-abomb{
   margin-top: 50%;
