@@ -1,0 +1,51 @@
+/* Content of projects */
+
+/* .proj-title
+.proj-details
+.proj-featured
+.proj-description
+.proj-media
+
+
+.subsection-gallery {
+  max-height: 500px;
+  position: relative;
+  display: inline-grid;
+  grid-column-gap: 30px;
+} */
+
+/* Text content of projects */
+/* .subsection-text-block {
+  width: 400px;
+  margin-right: 30px;
+  height: 500px;
+  overflow-y: hidden;
+  position: relative;
+  display: inline;
+  grid-row: 1;
+} */
+
+/* .subsection-text-tech {
+  margin-top: 30px;
+  color: grey;
+} */
+
+/* .subsection-text-lang1 {
+  margin-top: 25px;
+} */
+
+/* .subsection-text-lang2 {
+  margin-top: 25px;
+  color: grey;
+} */
+
+/* Image content of projects */
+/* .subsection-img {
+  display: inline;
+  grid-row: 1;
+} */
+
+/* Video content of projects */
+/* .subsection-video {}
+
+.subsection-audio {} */
