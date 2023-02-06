@@ -31,7 +31,7 @@ function Nav() {
         <li className='nav-separator'>
           <>- - -</>
         </li>
-        {list.filter(({ category }) => category === 'test')
+        {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
           .map(({ navTitle, pathNav }, index) => (
             <li className='nav-item'
               key={index}>
