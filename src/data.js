@@ -12,8 +12,8 @@ export const pagesData = [
       year: '2022',
     },
     featured: {
-      src: '/images/niss-01.jpg',
-      alt: 'Test image',
+      type: MEDIA_TYPE.SOUNDCLOUD,
+      url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1420540456&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
     },
     description: [
       {
@@ -34,15 +34,6 @@ export const pagesData = [
       },
     ],
     media: [
-      {
-        type: MEDIA_TYPE.SOUNDCLOUD,
-        url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1420540456&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-      },
-      {
-        type: MEDIA_TYPE.IMAGE,
-        src: '/images/niss01.jpg',
-        alt: 'Mid shot of NISS installation',
-      },
     ],
   },
   {
@@ -52,12 +43,12 @@ export const pagesData = [
     pathNav: '/projects/kein-spieler',
     title: 'Kein Spieler',
     details: {
-      media:'Sound Performnace',
+      media: 'Sound Performnace',
       year: '2021',
     },
     featured: {
-      src: '//i1.sndcdn.com/artworks-G21NiHnZdROjmz4D-iwQebQ-t500x500.jpg',
-      alt: 'Photo of a hand holding a coil microphone over a cassete tape player.',
+      type: MEDIA_TYPE.SOUNDCLOUD,
+      url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097240362&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
     },
     description: [
       {
@@ -69,12 +60,7 @@ export const pagesData = [
         value: 'Antiguos reproductores electrónicos de audio recuperados y elevados como instrumentos: productores de sonido. Estos nuevos instrumentos son máquinas liberadas de sus soportes de almacenamiento de datos. Inaudibles para los humanos, hablan y cantan con ondas electromagnéticas que son capturadas y adaptadas a nuesto plano perceptivo mediante bobinas.',
       }
     ],
-    media: [
-      {
-        type: MEDIA_TYPE.SOUNDCLOUD,
-        url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1097240362&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
-      },
-    ],
+    media: [],
   },
   {
     id: 7,
@@ -87,6 +73,7 @@ export const pagesData = [
       year: '2018-19',
     },
     featured: {
+      type: MEDIA_TYPE.IMAGE,
       src: '/images/niss-01.jpg',
       alt: 'Mid shot of NISS installation',
     },
@@ -106,10 +93,6 @@ export const pagesData = [
     ],
     media: [
       {
-        type: MEDIA_TYPE.SOUNDCLOUD,
-        url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1420540456&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-      },
-      {
         type: MEDIA_TYPE.IMAGE,
         src: '/images/niss-02.jpg',
         alt: 'Full-shot of NISS installation',
@@ -123,17 +106,18 @@ export const pagesData = [
     pathNav: '/projects/spundscapes-of-clay',
     title: 'Soundscapes of Clay',
     details: {
-      media:'Sound Installation',
+      media: 'Sound Installation',
       year: '2017',
     },
     featured: {
+      type: MEDIA_TYPE.IMAGE,
       src: '/images/sdsc-cly-01.jpg',
       alt: 'Full shot of Soundscapes of Clay installation',
     },
     description: [
       {
         language: 'en',
-        value:'This installation works with the feedback process between the objects on a place and the soundscape that surrounds them. An unbreakable link is presented; everything in a space generates and modifies its soundscape, becomes an interference generator. The objects interact with ther soundscape and/or, in someway, process it as physical filters',
+        value: 'This installation works with the feedback process between the objects on a place and the soundscape that surrounds them. An unbreakable link is presented; everything in a space generates and modifies its soundscape, becomes an interference generator. The objects interact with ther soundscape and/or, in someway, process it as physical filters',
       },
       {
         language: 'es',
@@ -175,10 +159,11 @@ export const pagesData = [
     pathNav: '/projects/this-place',
     title: 'ESTE LUGAR: AQUÍ, AHORA Y ECOS DEL PASADO (THIS PLACE)',
     details: {
-      media:'Sound performance',
+      media: 'Sound performance',
       year: '2016',
     },
     featured: {
+      type: MEDIA_TYPE.IMAGE,
       src: '/images/this-place-01.jpg',
       alt: "Full shot of This Place performance",
     },
@@ -201,10 +186,11 @@ export const pagesData = [
     pathNav: '/projects/drive',
     title: 'Drive',
     details: {
-      media:'A/V instalation | 2 min loop',
+      media: 'A/V instalation | 2 min loop',
       year: '2017',
     },
     featured: {
+      type: MEDIA_TYPE.IMAGE,
       src: 'https://sergiolecuona.es/images/drive-01.jpg',
       alt: 'Dark vídeo projected on a glass panel and reflected on the wall',
     },
@@ -227,10 +213,11 @@ export const pagesData = [
     pathNav: '/projects/a-bomb',
     title: 'A-Bomb',
     details: {
-      media:'Mono-channel Film.',
+      media: 'Mono-channel Film.',
       year: '2018',
     },
     featured: {
+      type: MEDIA_TYPE.IMAGE,
       src: '/images/a-bomb-01.jpg',
       alt: 'Still of A-Bomb film. Three squares showing a detonation in the dessert from different perspectives',
     },
@@ -277,11 +264,11 @@ export const pagesData = [
     pathNav: '/projects/night-city',
     title: 'Night City',
     details: {
-      media:'Video Installation',
+      media: 'Video Installation',
       year: '2016',
     },
     featured: {
-      //https://sergiolecuona.es/images/night-city-02.jpg
+      type: MEDIA_TYPE.IMAGE,
       src: '/images/night-city-02.jpg',
       alt: "Still of the feed of a surveilance camera at night. The image is distorted by the camera's lens. The camera points to an empty avenue crossing."
     },
@@ -304,12 +291,13 @@ export const pagesData = [
     pathNav: '/projects/too-closer',
     title: 'Too Closer',
     details: {
-      media:'',
+      media: '',
       year: '',
     },
     featured: {
-        src: '/images/too-closer-60314_075446.jpg',
-        alt: 'Square image of something blue. So close that you can only see the texture of the material as an abstract image.'
+      type: MEDIA_TYPE.IMAGE,
+      src: '/images/too-closer-60314_075446.jpg',
+      alt: 'Square image of something blue. So close that you can only see the texture of the material as an abstract image.'
     },
     description: [
       {
@@ -355,6 +343,7 @@ export const pagesData = [
       year: '0000',
     },
     featured: {
+      type: MEDIA_TYPE.IMAGE,
       src: 'https://picsum.photos/200/300',
       alt: 'Test image',
     },
