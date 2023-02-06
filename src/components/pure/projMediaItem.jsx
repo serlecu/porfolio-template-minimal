@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { MEDIA_TYPE } from '../../models/project.enum';
 
 
-const ProjectMediaItem = ({ item }) => {
+const ProjMediaItem = ({ item }) => {
 
   switch (item.type) {
     case MEDIA_TYPE.IMAGE:
@@ -45,9 +45,9 @@ const ProjectMediaItem = ({ item }) => {
 };
 
 
-ProjectMediaItem.propTypes = {
+ProjMediaItem.propTypes = {
 
 };
 
 
-export default ProjectMediaItem;
+export default ProjMediaItem;

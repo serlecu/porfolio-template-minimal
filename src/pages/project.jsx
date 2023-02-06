@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjDescription from '../components/pure/projDescription';
 import ProjDetails from '../components/pure/projDetails';
-import ProjectMediaItem from '../components/pure/projectMediaItem';
+import ProjMediaItem from '../components/pure/projMediaItem';
 import ProjTitle from '../components/pure/projTitle';
 import pagesData from '../data';
 
@@ -21,7 +21,7 @@ const Project = ({ projectId }) => {
         {project.featured ?
           (
             <div className='proj-featured'>
-              <ProjectMediaItem item={project.featured} />
+              <ProjMediaItem item={project.featured} />
             </div>
           ) : null}
 
@@ -33,7 +33,7 @@ const Project = ({ projectId }) => {
         (
           <div className={`proj-media-${item.type}`}
             key={index}>
-            <ProjectMediaItem item={item} />
+            <ProjMediaItem item={item} />
           </div>
         ))
         }
