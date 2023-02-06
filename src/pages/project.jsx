@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjDescription from '../components/pure/projDescription';
+import ProjDetails from '../components/pure/projDetails';
 import ProjectMediaItem from '../components/pure/projectMediaItem';
+import ProjTitle from '../components/pure/projTitle';
 import pagesData from '../data';
 
 const Project = ({ projectId }) => {
@@ -12,13 +14,9 @@ const Project = ({ projectId }) => {
     <section className='container text-left px-0 overflow-hidden'>
 
       {/* Title & Details */}
-      <div className='proj-header d-flex flex-row gx-4 mb-4 align-items-center"'>
-        <h2 className='proj-title col-auto px-0'>
-          {project.title}
-        </h2>
-        <p className='proj-details col-auto text-secondary px-0'>
-          [ {project.details.media} | {project.details.year} ]
-        </p>
+      <div className='proj-header d-flex row gx-2 mb-4 align-items-center'>
+        <ProjTitle title={project.title} />
+        <ProjDetails details={project.details} />
       </div>
 
       {/* Content */}
