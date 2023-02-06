@@ -23,11 +23,10 @@ const ProjectMediaItem = ({ item }) => {
 
     case MEDIA_TYPE.SOUNDCLOUD:
       return (
-        <iframe
+        <iframe className='proj-media-soundcloud'
           title="soundcloud player"
           width="100%"
-          height="166"
-          frameBorder="no"
+          height="100%"
           allow="autoplay"
           src={item.url}
         >
