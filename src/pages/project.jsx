@@ -25,15 +25,12 @@ const Project = ({ projectId }) => {
 
         {/* <div className='col-5 px-0'> */}
         {/* Featured */}
-        <div className='proj-featured'>
-          {project.featured ?
-            (
-              <img className='img-fluid'
-                src={project.featured.src}
-                alt={project.featured.alt}
-              />
-            ) : null}
-        </div>
+        {project.featured ?
+          (
+            <div className='proj-featured'>
+              <ProjectMediaItem item={project.featured} />
+            </div>
+          ) : null}
         {/* Descriptions */}
         <div className='proj-desc'>
           {project.description.map((text, index) => (
@@ -47,12 +44,12 @@ const Project = ({ projectId }) => {
         {/* <div className='proj-media col'> */}
         {/* </div> */}
         {project.media.map((item, index) =>
-          (
-            <div className={`proj-media-${item.type}`}
-              key={index}>
-              <ProjectMediaItem item={item} />
-            </div>
-          ))
+        (
+          <div className={`proj-media-${item.type}`}
+            key={index}>
+            <ProjectMediaItem item={item} />
+          </div>
+        ))
         }
 
         {/* </div> */}
