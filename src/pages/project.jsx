@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjDescription from '../components/pure/projDescription';
 import ProjectMediaItem from '../components/pure/projectMediaItem';
 import pagesData from '../data';
 
@@ -33,12 +34,7 @@ const Project = ({ projectId }) => {
           ) : null}
         {/* Descriptions */}
         <div className='proj-desc'>
-          {project.description.map((text, index) => (
-            <p key={index}
-              className='proj-description'>
-              {text.value}
-            </p>
-          ))}
+          <ProjDescription descriptions={project.description} />
         </div>
         {/* Media */}
         {/* <div className='proj-media col'> */}
