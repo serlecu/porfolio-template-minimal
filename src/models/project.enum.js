@@ -2,6 +2,7 @@ export const SECTION = {
   TEST: 'test',
   SOUND_WORKS: 'sound-works',
   GRAPHIC_WORKS: 'graphic-works',
+  SILENT_WORKS: 'silent-works',
 };
 
 export const MEDIA_TYPE = {
