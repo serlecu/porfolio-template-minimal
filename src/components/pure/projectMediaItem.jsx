@@ -8,7 +8,7 @@ const ProjectMediaItem = ({ item }) => {
   switch (item.type) {
     case MEDIA_TYPE.IMAGE:
       return (
-        <img className='proj-media-img w-10'
+        <img className='proj-media-img w-10 img-fluid'
           src={item.src}
           alt={item.alt}
 
