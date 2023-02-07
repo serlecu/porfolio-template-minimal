@@ -1,5 +1,6 @@
 export const SECTION = {
   TEST: 'test',
+  HIDDEN: 'hidden',
   SOUND_WORKS: 'sound-works',
   GRAPHIC_WORKS: 'graphic-works',
   SILENT_WORKS: 'silent-works',
