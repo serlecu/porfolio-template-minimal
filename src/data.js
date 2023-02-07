@@ -208,7 +208,7 @@ export const pagesData = [
   },
   {
     id: 3,
-    category: SECTION.SILENT_WORKS,
+    category: SECTION.HIDDEN,
     navTitle: 'A-Bomb',
     pathNav: '/projects/a-bomb',
     title: 'A-Bomb',
