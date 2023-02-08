@@ -35,7 +35,7 @@ const Root = ({ data }) => {
           <div className='col-sm-auto py-4 px-4 bg-body'>
             <NavMobile />
           </div>
-          <div className='col-sm-7 py-4 px-4 bg-body'>
+          <div className='col-sm-7 py-0 px-4 bg-body'>
             <Outlet />
           </div>
         </div>
