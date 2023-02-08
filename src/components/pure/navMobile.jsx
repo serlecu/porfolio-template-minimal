@@ -62,8 +62,10 @@ function NavMobile() {
                   <li className='nav-item'
                     key={index}>
                     <NavLink to={pathNav}
-                      className={({ isActive }) => linkStyle(isActive)}>
+                      className={({ isActive }) => linkStyle(isActive)}
+                      onClick={() => setShowMenu(false)}>
                       {navTitle}
+                      
                     </NavLink>
                   </li>
                 ))}
