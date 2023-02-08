@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../styles/nav.css';
 
@@ -9,7 +9,9 @@ function linkStyle(active) {
   return active ? 'link-active' : 'link';
 }
 
-function Nav() {
+function NavMobile() {
+
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
 
@@ -21,23 +23,18 @@ function Nav() {
       <button
         className="btn"
         type="button"
+        data-bs-target="#offcanvasExample"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvas"
-        aria-controls="offcanvas"
+        aria-controls="offcanvasExample"
+        onClick={() => setShowMenu(true)}
       >
-        Menu
-        {/* <i 
-        className="bi bi-list"
-        role="button"
-        data-bs-toggle="mobileNav"
-        href="#mobileNav"
-        //data-bs-target="#mobileNav"
-        ></i> */}
+        <i className="bi bi-list"></i>
       </button>
 
+
       <div
-        className="offcanvas offcanvas-end"
-        id="offcanvas"
+        className={showMenu ? "offcanvas offcanvas-end show" : "offcanvas offcanvas-end"}
+        id="offcanvaExample"
         tabIndex="-1"
         aria-labelledby="offcanvasLabel"
       >
@@ -52,47 +49,48 @@ function Nav() {
               className="btn-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
+              onClick={() => setShowMenu(false)}
             ></button>
           </div>
         </div>
 
         <div className="offcanvas-body">
-          <ul className="navbar-nav justify-content-start ">
-
-            {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
-              .map(({ navTitle, pathNav }, index) => (
-                <li className='nav-item'
-                  key={index}>
-                  <NavLink to={pathNav}
-                    className={({ isActive }) => linkStyle(isActive)}>
-                    {navTitle}
-                  </NavLink>
-                </li>
-              ))}
-            <li className='nav-separator'>
-              <>- - -</>
-            </li>
-            {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
-              .map(({ navTitle, pathNav }, index) => (
-                <li className='nav-item'
-                  key={index}>
-                  <NavLink to={pathNav}
-                    className={({ isActive }) => linkStyle(isActive)}>
-                    {navTitle}
-                  </NavLink>
-                </li>
-              ))}
-            <li className='nav-separator'>
-              <>- - -</>
-            </li>
-            <li className='nav-item'>
-              <NavLink to='/about'
-                className={({ isActive }) => linkStyle(isActive)}>
-                About
-              </NavLink>
-            </li>
-
-          </ul>
+          <div className='container mt-3'>
+            <ul className="navbar-nav justify-content-start">
+              {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
+                .map(({ navTitle, pathNav }, index) => (
+                  <li className='nav-item'
+                    key={index}>
+                    <NavLink to={pathNav}
+                      className={({ isActive }) => linkStyle(isActive)}>
+                      {navTitle}
+                    </NavLink>
+                  </li>
+                ))}
+              <li className='nav-separator'>
+                <>- - -</>
+              </li>
+              {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
+                .map(({ navTitle, pathNav }, index) => (
+                  <li className='nav-item'
+                    key={index}>
+                    <NavLink to={pathNav}
+                      className={({ isActive }) => linkStyle(isActive)}>
+                      {navTitle}
+                    </NavLink>
+                  </li>
+                ))}
+              <li className='nav-separator'>
+                <>- - -</>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='/about'
+                  className={({ isActive }) => linkStyle(isActive)}>
+                  About
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -134,4 +132,4 @@ function Nav() {
   )
 }
 
-export default Nav
+export default NavMobile
