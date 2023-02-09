@@ -17,7 +17,7 @@ const Root = ({ data }) => {
   });
 
   return (
-    <div className='container-sm overflow-hidden text-lefty'>
+    <div className='container-sm overflow-hidden text-lefty px-3'>
       { matches ? (
         <div className='row justify-content-sm-center'>
           <div className='col-sm-auto py-4 px-4 bg-body'>

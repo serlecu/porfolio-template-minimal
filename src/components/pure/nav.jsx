@@ -22,6 +22,7 @@ function Nav() {
           <p><b>Sound_Works</b></p>
         </li>
         {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
+          .sort((a, b) => b.id - a.id )
           .map(({ navTitle, pathNav }, index) => (
             <li className='nav-item'
               key={index}>
@@ -35,6 +36,7 @@ function Nav() {
                 <p><b>Silent_Works</b></p>
         </li>
         {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
+          .sort((a, b) => b.id - a.id )
           .map(({ navTitle, pathNav }, index) => (
             <li className='nav-item'
               key={index}>
@@ -48,6 +50,7 @@ function Nav() {
           <p><b>Image_Works</b></p>
         </li>
         {list.filter(({ category }) => category === SECTION.IMAGE_WORKS)
+          .sort((a, b) => b.id - a.id )
           .map(({ navTitle, pathNav }, index) => (
             <li className='nav-item'
               key={index}>
