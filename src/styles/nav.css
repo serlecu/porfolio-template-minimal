@@ -1,0 +1,33 @@
+/* menu */
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-title a{
+  color: inherit;
+  margin-bottom: 24px;
+  text-decoration: none; 
+}
+
+.nav-item a{
+  color: inherit;
+  text-decoration: none; 
+}
+
+.nav-item .link:hover {
+  color: hotpink;
+}
+
+.nav-item .link:focus {
+  color: blueviolet;
+}
+
+.nav-item .link-active {
+  color: blue;
+}
+
+.nav-item .link-active:hover {
+  color: blue;
+}
