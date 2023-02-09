@@ -57,6 +57,9 @@ function NavMobile() {
         <div className="offcanvas-body">
           <div className='container mt-3'>
             <ul className="navbar-nav justify-content-start">
+              <li className='nav-group-title'>
+                <p><b>Sound_Works</b></p>
+              </li>
               {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
                 .map(({ navTitle, pathNav }, index) => (
                   <li className='nav-item'
@@ -65,12 +68,12 @@ function NavMobile() {
                       className={({ isActive }) => linkStyle(isActive)}
                       onClick={() => setShowMenu(false)}>
                       {navTitle}
-                      
+
                     </NavLink>
                   </li>
                 ))}
-              <li className='nav-separator'>
-                <>- - -</>
+              {/* <li className='nav-separator mt-2'>
+                <p><b>Silent_Works</b></p>
               </li>
               {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
                 .map(({ navTitle, pathNav }, index) => (
@@ -82,8 +85,22 @@ function NavMobile() {
                       {navTitle}
                     </NavLink>
                   </li>
+                ))} */}
+              <li className='nav-separator mt-2'>
+                <p><b>Image_Works</b></p>
+              </li>
+              {list.filter(({ category }) => category === SECTION.IMAGE_WORKS)
+                .map(({ navTitle, pathNav }, index) => (
+                  <li className='nav-item'
+                    key={index}>
+                    <NavLink to={pathNav}
+                      className={({ isActive }) => linkStyle(isActive)}
+                      onClick={() => setShowMenu(false)}>
+                      {navTitle}
+                    </NavLink>
+                  </li>
                 ))}
-              <li className='nav-separator'>
+              <li className='nav-separator mt-2'>
                 <>- - -</>
               </li>
               <li className='nav-item'>
