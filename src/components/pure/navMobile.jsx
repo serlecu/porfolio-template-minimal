@@ -21,14 +21,14 @@ function NavMobile() {
       </h2>
 
       <button
-        className="btn"
+        className="btn pe-0"
         type="button"
         data-bs-target="#offcanvasExample"
         data-bs-toggle="offcanvas"
         aria-controls="offcanvasExample"
         onClick={() => setShowMenu(true)}
       >
-        <i className="bi bi-list"></i>
+        <i className="bi bi-list" style={{ fontSize: "1.5rem"}}></i>
       </button>
 
 
@@ -46,13 +46,13 @@ function NavMobile() {
               <NavLink to='/'>SERGIO LECUONA</NavLink>
             </h2>
             <button
-              className="btn"
+              className="btn pe-0"
               type="button"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
               onClick={() => setShowMenu(false)}
             >
-              <i className="bi bi-x-lg"></i>
+              <i className="bi bi-x-lg" style={{ fontSize: "1.5rem"}}></i>
             </button>
           </div>
         </div>
