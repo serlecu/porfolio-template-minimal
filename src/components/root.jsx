@@ -17,10 +17,11 @@ const Root = ({ data }) => {
   });
 
   return (
-    <div className='container-sm overflow-hidden text-lefty px-3'>
+    <div className='container-sm text-lefty px-3'
+        style={{minHeight: "95vh"}}>
       { matches ? (
         <div className='row justify-content-sm-center'>
-          <div className='col-sm-auto py-4 px-4 bg-body'>
+          <div className='col-sm-auto pb-4 px-4 bg-body'>
             <Nav />
           </div>
           <div className='col-auto py-4 px-2 bg-body'>
@@ -32,7 +33,7 @@ const Root = ({ data }) => {
         </div>
       ) : (
         <div className='row justify-content-sm-center'>
-          <div className='col-sm-auto py-4 px-4 bg-body'>
+          <div className='col-sm-auto py-4 px-4 bg-body sticky-top'>
             <NavMobile />
           </div>
           <div className='col-sm-7 py-0 px-4 bg-body'>

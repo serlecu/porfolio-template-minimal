@@ -13,7 +13,7 @@ function Nav() {
 
   return (
 
-    <nav className='nav flex-sm-column float-start sticky-top'>
+    <nav className='nav flex-sm-column float-start pt-4 sticky-top'>
       <h1 className='nav-title'>
         <NavLink to='/'>SERGIO LECUONA</NavLink>
       </h1>

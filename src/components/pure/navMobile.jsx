@@ -15,7 +15,7 @@ function NavMobile() {
 
   return (
 
-    <div className='nav d-flex align-items-center justify-content-between sticky-top'>
+    <div className='nav d-flex align-items-center justify-content-between'>
       <h2 className='nav-title'>
         <NavLink to='/'>SERGIO LECUONA</NavLink>
       </h2>
