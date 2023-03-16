@@ -15,7 +15,7 @@ function Nav() {
 
     <nav className='nav flex-sm-column float-start pt-4 sticky-top'>
       <h1 className='nav-title'>
-        <NavLink to='/'>SERGIO LECUONA</NavLink>
+        <NavLink to='/'>Jorge Dabaliña</NavLink>
       </h1>
       <ul>
         <li className='nav-separator'>
