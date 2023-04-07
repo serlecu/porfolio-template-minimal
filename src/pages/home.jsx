@@ -6,16 +6,16 @@ function Home() {
 
   const images = [
     {
-      src: '/images/1-Captura-de-pantalla-2016-02-18-a-las-21-38-40EXP2.jpg',
-      alt: 'Sulveilance camera still of deers in the forest at night spotted with a strong light.',
+      src: '/images/portfolio_live.jpg',
+      alt: '',
     },
     {
-      src: '/images/9-Captura-de-pantalla-2017-04-05-a-las-13-07-59EXP.jpg',
-      alt: 'Sulveilance camera still of a worksite from a top-down view in the middle of the city at daylight.',
+      src: '/images/portfolio_cubes.jpg',
+      alt: '',
     },
     {
-      src: '/images/2-Captura-de-pantalla-2017-04-05-a-las-13-40-45EXP2.jpg',
-      alt: 'Sulveilance camera still of a worksite from a top-down view in the middle of the city at daylight.',
+      src: '/images/portfolio_pam.jpg',
+      alt: '',
     },
   ];
 
@@ -36,7 +36,7 @@ function Home() {
     setCurrentPicIndex(nextPicIndex);
   }
   function changeImageRandom() {
-    const picRandom = Math.floor(Math.random() * (images.length - 1));
+    const picRandom = Math.floor(Math.random() * (images.length));
     setCurrentPicIndex(picRandom);
   }
 

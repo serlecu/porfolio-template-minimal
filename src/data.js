@@ -31,10 +31,10 @@ export const pagesData = [
   },
   { // 1
     id: 1,
-    category: SECTION.IMAGE_WORKS, 
-    navTitle: 'exploracionEntrelazada',
+    category: SECTION.JORGE_WORKS, 
+    navTitle: 'Exploracion entrelazada',
     pathNav: '/projects/exploracionEntrelazada',
-    title: 'Exploracion Entrelazada',
+    title: 'Exploracion entrelazada',
     details: {
       media: 'Installation',
       year: '2021',
@@ -78,19 +78,19 @@ export const pagesData = [
     ],
   },
 
-  { // 4
+  {
     id: 4,
-    category: SECTION.SOUND_WORKS,
-    navTitle: 'Drive',
-    pathNav: '/projects/drive',
-    title: 'Drive',
+    category: SECTION.ROSER_WORKS,
+    navTitle: 'Reactive Wave Cubes',
+    pathNav: '/projects/reactive',
+    title: 'Reactive Wave Cubes',
     details: {
       media: 'A/V instalation | 2 min loop',
       year: '2017',
     },
     featured: {
       type: MEDIA_TYPE.IMAGE,
-      src: 'https://sergiolecuona.es/images/drive-01.jpg',
+      src: '/images/drive-01.jpg',
       alt: 'Dark vídeo projected on a glass panel and reflected on the wall',
     },
     description: [
@@ -101,6 +101,34 @@ export const pagesData = [
       {
         language: 'es',
         value: "De repente ya no estás en ese lugar. Estás en un espacio incierto, no sabes dónde. Todo parece igual pero ambiguo. Cada vez más y más perdido. Todo en movimiento continuo. Puedes intentar buscar el detalle o puedes dejarte llevar. Puedes no mirar a nada para verlo todo. Puedes...",
+      },
+    ],
+    media: [],
+  },
+  {
+    id: 3,
+    category: SECTION.ROSER_WORKS,
+    navTitle: 'Noves formes de fer musica',
+    pathNav: '/projects/novesformes',
+    title: 'Noves formes de fer musica',
+    details: {
+      media: 'Sound',
+      year: '2017',
+    },
+    featured: {
+      type: MEDIA_TYPE.IMAGE,
+      src: '/images/portfolio_noves.jpg',
+      alt: '',
+    },
+    description: [
+      {
+        language: 'en',
+        value: '"New ways of making music" aims to bring the new compositional languages of contemporary music closer to young people. It is born from listening to acoustic territories, where they can explore the environment around them and discover new sounds, often classified as noise. The educational application of this proposal has been possible thanks to its selection in the "Artistic residences in educational centers" of the City Council of Valencia and the practical experimentation has been carried out with the students of 6th of Primary Education of the CEIP Benimàmet (Valencia, Spain)',
+
+        },
+      {
+        language: 'es',
+        value: '“Nuevas formas de hacer música” pretende aproximar los nuevos lenguajes compositivos de la música contemporánea a los más jóvenes. Nace a partir de la escucha de los territorios acústicos, donde pueden explorar el entorno que les rodea y descubrir nuevos sonidos, muchas veces catalogados como ruidos. La aplicación docente de dicha propuesta ha sido posible gracias a su selección en las "Residencias artísticas en centros educativos" del Ayuntamiento de València y se ha realizado la experimentación práctica con el alumnado de 6º de Educación Primaria del CEIP Benimàmet (València, España).',
       },
     ],
     media: [],
