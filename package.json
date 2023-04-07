@@ -1,7 +1,7 @@
 {
   "name": "jorgedabalinayroserdomingo",
   "version": "0.0.1",
-  "homepage": "https://jorgedabalina.github.io/web2023/",
+  "homepage": "https://jorgedabalina.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
