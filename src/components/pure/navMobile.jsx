@@ -4,6 +4,7 @@ import '../../styles/nav.css';
 
 import { pagesData as list } from '../../data.js';
 import { SECTION } from '../../models/project.enum';
+import IconLinks from './iconLinks.jsx';
 
 function linkStyle(active) {
   return active ? 'link-active' : 'link';
@@ -115,6 +116,9 @@ function NavMobile() {
                   onClick={() => setShowMenu(false)}>
                   About
                 </NavLink>
+              </li>
+              <li className='nav-item mt-2'>
+                <IconLinks onMobile={true}/>
               </li>
             </ul>
           </div>

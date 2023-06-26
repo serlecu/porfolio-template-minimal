@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Nav from './pure/nav';
 import NavMobile from './pure/navMobile';
+import EmailOverlay from './pure/emailOverlay';
 
 const Root = ({ data }) => {
-
+  
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   )
@@ -41,6 +42,7 @@ const Root = ({ data }) => {
           </div>
         </div>
       )}
+      <EmailOverlay />
     </div>
   );
 }
