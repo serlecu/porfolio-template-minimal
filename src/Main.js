@@ -7,6 +7,8 @@ import pagesData from './data';
 import Root from './components/root';
 import Home from './pages/home';
 import About from './pages/about';
+import Cvroser from './pages/cvroser';
+import Cvjorge from './pages/cvjorge';
 import Project from './pages/project';
 import Error from './pages/error';
 
@@ -26,6 +28,10 @@ function Main() {
           ))}
           <Route path='about'
             element={<About />} />
+          <Route path='cvroser'
+            element={<Cvroser />} />
+            <Route path='cvjorge'
+            element={<Cvjorge />} />
           <Route path='*'
             element={<Error />} />
         </Route>

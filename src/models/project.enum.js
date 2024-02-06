@@ -1,9 +1,9 @@
 export const SECTION = {
   TEST: 'test',
   HIDDEN: 'hidden',
-  SOUND_WORKS: 'sound-works',
+  ROSER_WORKS: 'sound-works',
   SILENT_WORKS: 'silent-works',
-  IMAGE_WORKS: 'image-works',
+  JORGE_WORKS: 'image-works',
 };
 
 export const MEDIA_TYPE = {

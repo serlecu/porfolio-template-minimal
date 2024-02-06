@@ -17,7 +17,7 @@ function NavMobile() {
 
     <div className='nav d-flex align-items-center justify-content-between'>
       <h2 className='nav-title'>
-        <NavLink to='/'>SERGIO LECUONA</NavLink>
+        <NavLink to='/'>Jorge Dabaliña</NavLink>
       </h2>
 
       <button
@@ -43,7 +43,7 @@ function NavMobile() {
             <h2 className='nav-title'
               id="offcanvasLabel"
               onClick={() => setShowMenu(false)}>
-              <NavLink to='/'>SERGIO LECUONA</NavLink>
+              <NavLink to='/'>Jorge Dabaliña</NavLink>
             </h2>
             <button
               className="btn pe-0"

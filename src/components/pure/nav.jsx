@@ -15,13 +15,13 @@ function Nav() {
 
     <nav className='nav flex-sm-column float-start pt-4 sticky-top'>
       <h1 className='nav-title'>
-        <NavLink to='/'>SERGIO LECUONA</NavLink>
+        <NavLink to='/'>*-*</NavLink>
       </h1>
       <ul>
         <li className='nav-separator'>
-          <p><b>Sound_Works</b></p>
+          <p><b>Roser Domingo</b></p>
         </li>
-        {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
+        {list.filter(({ category }) => category === SECTION.ROSER_WORKS)
           .sort((a, b) => b.id - a.id )
           .map(({ navTitle, pathNav }, index) => (
             <li className='nav-item'
@@ -32,24 +32,16 @@ function Nav() {
               </NavLink>
             </li>
           ))}
-        {/* <li className='nav-separator mt-2'>
-                <p><b>Silent_Works</b></p>
+          <li className='nav-item'>
+          <NavLink to='/cvroser'
+            className={({ isActive }) => linkStyle(isActive)}>
+            CV Roser
+          </NavLink>
         </li>
-        {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
-          .sort((a, b) => b.id - a.id )
-          .map(({ navTitle, pathNav }, index) => (
-            <li className='nav-item'
-              key={index}>
-              <NavLink to={pathNav}
-                className={({ isActive }) => linkStyle(isActive)}>
-                {navTitle}
-              </NavLink>
-            </li>
-          ))} */}
         <li className='nav-separator mt-2'>
-          <p><b>Image_Works</b></p>
+          <p><b>Jorge Dabaliña</b></p>
         </li>
-        {list.filter(({ category }) => category === SECTION.IMAGE_WORKS)
+        {list.filter(({ category }) => category === SECTION.JORGE_WORKS)
           .sort((a, b) => b.id - a.id )
           .map(({ navTitle, pathNav }, index) => (
             <li className='nav-item'
@@ -60,6 +52,12 @@ function Nav() {
               </NavLink>
             </li>
           ))}
+           <li className='nav-item'>
+          <NavLink to='/cvjorge'
+            className={({ isActive }) => linkStyle(isActive)}>
+            CV Jorge
+          </NavLink>
+        </li>
         <li className='nav-separator mt-2'>
           <>- - -</>
         </li>
@@ -69,6 +67,7 @@ function Nav() {
             About
           </NavLink>
         </li>
+        
       </ul>
     </nav>
   )
