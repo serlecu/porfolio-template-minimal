@@ -23,7 +23,7 @@ const Root = ({ data }) => {
       { matches ? (
         <div className='row justify-content-sm-center'>
           <div className='col-sm-auto pb-4 px-4 bg-body'>
-            <Nav />
+            <Nav title={"SERGIO LECUONA"} />
           </div>
           <div className='col-auto py-4 px-2 bg-body'>
             <h1>:</h1>
@@ -35,7 +35,7 @@ const Root = ({ data }) => {
       ) : (
         <div className='row justify-content-sm-center'>
           <div className='col-sm-auto py-4 px-4 bg-body sticky-top'>
-            <NavMobile />
+            <NavMobile title={"SERGIO LECUONA"} />
           </div>
           <div className='col-sm-7 py-0 px-4 bg-body'>
             <Outlet />

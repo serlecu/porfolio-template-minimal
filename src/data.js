@@ -1,6 +1,17 @@
 import { SECTION, MEDIA_TYPE } from './models/project.enum.js';
 
-export const pagesData = [
+const navProjecSectionsList = [
+  {
+    label: 'Sound_Works',
+    type: SECTION.SOUND_WORKS,
+  },
+  {
+    label: 'Image_Works',
+    type: SECTION.IMAGE_WORKS,
+  }
+];
+
+const pagesData = [
   { // 0
     id: 0,
     category: SECTION.TEST,
@@ -400,7 +411,10 @@ export const pagesData = [
   },
 ]
 
-export default pagesData;
+export {
+  navProjecSectionsList,
+  pagesData,
+};
 
 /**
  * PAGE_DATA

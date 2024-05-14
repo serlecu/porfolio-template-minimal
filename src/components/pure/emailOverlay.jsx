@@ -14,15 +14,15 @@ const EmailOverlay = () => {
     <div 
       className="modal fade"
       id="emailModal" 
-      tabindex="-2" 
+      tabIndex="-2" 
       aria-labelledby="emailModalLabel" 
       aria-hidden="true"
     >
-      <div class="modal-dialog">
-        <div class="modal-content position-">
-          <div class="modal-header">
-            <h2 class="modal-title fs-5" id="exampleModalLabel">Contact</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div className="modal-dialog">
+        <div className="modal-content position-">
+          <div className="modal-header">
+            <h2 className="modal-title fs-5" id="exampleModalLabel">Contact</h2>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className='modal-body'>
             <div className='d-flex flex-row overflow-hidden mb-2'>
@@ -44,7 +44,7 @@ const EmailOverlay = () => {
                 </button>
             </div>
           </div>
-          <div class="modal-footer">
+          <div className="modal-footer">
             <div className='d-flex flex-row overflow-hidden'>
               <a className='icon-link me-2 fa-lg'
                 href="https://soundcloud.com/sergiolecuona" target="_blank" rel="noreferrer">

@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../styles/nav.css';
 
+import { navProjecSectionsList as projSections } from '../../data.js';
 import { pagesData as list } from '../../data.js';
-import { SECTION } from '../../models/project.enum';
+// import { SECTION } from '../../models/project.enum';
 import IconLinks from './iconLinks.jsx';
 
 function linkStyle(active) {
   return active ? 'link-active' : 'link';
 }
 
-function NavMobile() {
+function NavMobile( {title} ) {
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -18,7 +19,7 @@ function NavMobile() {
 
     <div className='nav d-flex align-items-center justify-content-between'>
       <h2 className='nav-title'>
-        <NavLink to='/'>SERGIO LECUONA</NavLink>
+        <NavLink to='/'>{title}</NavLink>
       </h2>
 
       <button
@@ -44,7 +45,7 @@ function NavMobile() {
             <h2 className='nav-title'
               id="offcanvasLabel"
               onClick={() => setShowMenu(false)}>
-              <NavLink to='/'>SERGIO LECUONA</NavLink>
+              <NavLink to='/'>{title}</NavLink>
             </h2>
             <button
               className="btn pe-0"
@@ -61,52 +62,28 @@ function NavMobile() {
         <div className="offcanvas-body">
           <div className='container mt-3'>
             <ul className="navbar-nav justify-content-start">
-              <li className='nav-group-title'>
-                <p><b>Sound_Works</b></p>
-              </li>
-              {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
-                .sort((a, b) => b.id - a.id)
-                .map(({ navTitle, pathNav }, index) => (
-                  <li className='nav-item'
-                    key={index}>
-                    <NavLink to={pathNav}
-                      className={({ isActive }) => linkStyle(isActive)}
-                      onClick={() => setShowMenu(false)}>
-                      {navTitle}
+              {projSections.map(({ label, type }, index) => (
+                <>
+                  <li className={index == 0 ? 'nav-group-title':'nav-separator mt-2'}>
+                    <p><b>{label}</b></p>
+                  </li>
+                  {
+                    list.filter(({ category }) => category === type)
+                    .sort((a, b) => b.id - a.id )
+                    .map(({ navTitle, pathNav }, index) => (
+                      <li className='nav-item'
+                        key={index}>
+                        <NavLink to={pathNav}
+                          className={({ isActive }) => linkStyle(isActive)}
+                          onClick={() => setShowMenu(false)}>
+                          {navTitle}
+                        </NavLink>
+                      </li>
+                    ))
+                  }
+                </>
+              ))}
 
-                    </NavLink>
-                  </li>
-                ))}
-              {/* <li className='nav-separator mt-2'>
-                <p><b>Silent_Works</b></p>
-              </li>
-              {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
-                .sort((a, b) => b.id - a.id)
-                .map(({ navTitle, pathNav }, index) => (
-                  <li className='nav-item'
-                    key={index}>
-                    <NavLink to={pathNav}
-                      className={({ isActive }) => linkStyle(isActive)}
-                      onClick={() => setShowMenu(false)}>
-                      {navTitle}
-                    </NavLink>
-                  </li>
-                ))} */}
-              <li className='nav-separator mt-2'>
-                <p><b>Image_Works</b></p>
-              </li>
-              {list.filter(({ category }) => category === SECTION.IMAGE_WORKS)
-                .sort((a, b) => b.id - a.id)
-                .map(({ navTitle, pathNav }, index) => (
-                  <li className='nav-item'
-                    key={index}>
-                    <NavLink to={pathNav}
-                      className={({ isActive }) => linkStyle(isActive)}
-                      onClick={() => setShowMenu(false)}>
-                      {navTitle}
-                    </NavLink>
-                  </li>
-                ))}
               <li className='nav-separator mt-2'>
                 <>- - -</>
               </li>

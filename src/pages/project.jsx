@@ -3,7 +3,7 @@ import ProjDescription from '../components/pure/projDescription';
 import ProjDetails from '../components/pure/projDetails';
 import ProjMediaItem from '../components/pure/projMediaItem';
 import ProjTitle from '../components/pure/projTitle';
-import pagesData from '../data';
+import { pagesData } from '../data';
 
 const Project = ({ projectId }) => {
 

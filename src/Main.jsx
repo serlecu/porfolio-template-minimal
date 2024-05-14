@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/main.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import pagesData from './data';
+import { pagesData } from './data';
 
 import Root from './components/root';
 import Home from './pages/home';

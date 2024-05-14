@@ -2,65 +2,43 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../styles/nav.css';
 
+import { navProjecSectionsList as projSections } from '../../data.js';
 import { pagesData as list } from '../../data.js';
-import { SECTION } from '../../models/project.enum';
 import IconLinks from './iconLinks.jsx';
 
 function linkStyle(active) {
   return active ? 'link-active' : 'link';
 }
 
-function Nav() {
+function Nav( {title} ) {
 
   return (
 
     <nav className='nav flex-sm-column float-start pt-4 sticky-top'>
       <h1 className='nav-title'>
-        <NavLink to='/'>SERGIO LECUONA</NavLink>
+        <NavLink to='/'>{title}</NavLink>
       </h1>
       <ul>
-        <li className='nav-separator'>
-          <p><b>Sound_Works</b></p>
-        </li>
-        {list.filter(({ category }) => category === SECTION.SOUND_WORKS)
-          .sort((a, b) => b.id - a.id )
-          .map(({ navTitle, pathNav }, index) => (
-            <li className='nav-item'
-              key={index}>
-              <NavLink to={pathNav}
-                className={({ isActive }) => linkStyle(isActive)}>
-                {navTitle}
-              </NavLink>
+        {projSections.map(({ label, type }, index) => (
+          <>
+            <li className={index == 0 ? 'nav-separator':'nav-separator mt-2'}>
+              <p><b>{label}</b></p>
             </li>
-          ))}
-        {/* <li className='nav-separator mt-2'>
-                <p><b>Silent_Works</b></p>
-        </li>
-        {list.filter(({ category }) => category === SECTION.SILENT_WORKS)
-          .sort((a, b) => b.id - a.id )
-          .map(({ navTitle, pathNav }, index) => (
-            <li className='nav-item'
-              key={index}>
-              <NavLink to={pathNav}
-                className={({ isActive }) => linkStyle(isActive)}>
-                {navTitle}
-              </NavLink>
-            </li>
-          ))} */}
-        <li className='nav-separator mt-2'>
-          <p><b>Image_Works</b></p>
-        </li>
-        {list.filter(({ category }) => category === SECTION.IMAGE_WORKS)
-          .sort((a, b) => b.id - a.id )
-          .map(({ navTitle, pathNav }, index) => (
-            <li className='nav-item'
-              key={index}>
-              <NavLink to={pathNav}
-                className={({ isActive }) => linkStyle(isActive)}>
-                {navTitle}
-              </NavLink>
-            </li>
-          ))}
+            {
+              list.filter(({ category }) => category === type)
+              .sort((a, b) => b.id - a.id )
+              .map(({ navTitle, pathNav }, index) => (
+                <li className='nav-item'
+                  key={index}>
+                  <NavLink to={pathNav}
+                    className={({ isActive }) => linkStyle(isActive)}>
+                    {navTitle}
+                  </NavLink>
+                </li>
+              ))
+            }
+          </>
+        ))}
         <li className='nav-separator mt-2'>
           <>- - -</>
         </li>
